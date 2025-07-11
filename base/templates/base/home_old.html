@@ -1,0 +1,42 @@
+{% extends 'main.html' %} {% block content %}
+
+<style>
+  .main-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  .heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .home-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 20px;
+  }
+  .home-container > div {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+</style>
+
+<div class="main-container">
+  <div class="heading">
+    <h1>Home template</h1>
+    <p>Welcome to the Study Lounge!</p>
+  </div>
+  <div class="home-container">
+    <div>{% include 'base/topics_component.html' %}</div>
+    <div>
+      <a href="{% url 'create-room' %}">Create Room</a>
+      <h5>{{room_count}} rooms available</h5>
+      <hr />
+      {%include 'base/feed_component.html'%}
+    </div>
+    <div>{%include 'base/activity_component.html'%}</div>
+  </div>
+  {% endblock content%}
+</div>

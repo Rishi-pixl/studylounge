@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+*.sqlite3
+
+# Django
+db.sqlite3
+*.log
+local_settings.py
+.env
+staticfiles/
+media/
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE/editor specific
+.vscode/
+.idea/
+*.swp
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+build/
+dist/
+*.bak
+
+# Node (if you use npm for static)
+node_modules/
+
+# Pipenv
+Pipfile.lock
+
+# Docker
+*.pid
+
+# Coverage reports
+htmlcov/
+.coverage
+
+# Render/Deployment specific
+render.yaml
