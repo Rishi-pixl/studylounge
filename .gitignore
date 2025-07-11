@@ -44,6 +44,3 @@ Pipfile.lock
 # Coverage reports
 htmlcov/
 .coverage
-
-# Render/Deployment specific
-render.yaml

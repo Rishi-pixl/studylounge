@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: studylounge
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --no-input
+      python manage.py migrate
+    startCommand: gunicorn StudyLounge.wsgi:application
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: f!8x&r8#8zc6r59o@-3kq9yl+x$h3ms$2gq0o3p=w7bz=123456
+      - key: DEBUG
+        value: False
+      - key: ALLOWED_HOSTS
+        value: practice.onrender.com 
